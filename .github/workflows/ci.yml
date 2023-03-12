@@ -1,0 +1,26 @@
+name: Python CI
+
+on: [push]
+
+permissions: read-all
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - "3.9" # CircuitPython or MicroPython might only implement a subset of the language spec
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: |
+          pip install black pytest serial
+      - run: |
+          black --check src tests examples
+      - run: |
+          PYTHONPATH=src pytest tests
