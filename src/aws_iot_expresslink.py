@@ -1,3 +1,10 @@
+"""
+AWS IoT ExpressLink - Python library
+Version: 1.0.0 from 2023-04-03
+Source: https://github.com/awslabs/aws-iot-expresslink-library-python
+License: MIT-0
+"""
+
 import time
 import re
 import sys

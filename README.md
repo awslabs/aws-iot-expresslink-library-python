@@ -1,4 +1,4 @@
-# AWS IoT ExpressLink - Python and CircuitPython library
+# AWS IoT ExpressLink - Python library
 
 This project is a library to interface with AWS IoT ExpressLink modules with Linux/macOS/Windows devices running [Python](https://www.python.org/downloads/) or microcontrollers running [CircuitPython](https://circuitpython.org/) and [MicroPython](https://micropython.org/). It uses AT commands and provides a thin Python wrapper for parsing and integrating into your Python-based projects.
 
